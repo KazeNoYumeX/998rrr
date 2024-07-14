@@ -1,6 +1,6 @@
 <template>
   <!-- 限量周邊 -->
-  <div class="bg-secondary-200">
+  <div class="bg-secondary-200" v-if="products.length > 0">
     <div
       class="container mt-20 mt-md-0 pt-5 pt-sm-10 pt-md-20 d-flex flex-column align-items-center"
     >
@@ -33,18 +33,18 @@
             :key="product.id"
             class="slide-container"
           >
-            <RouterLink :to="`/product/${product.id}`">
+            <a :href="product.url" target="_blank">
               <img
                 class="slide-products-img"
-                :src="product.imageUrl['600w']"
+                :src="product.imageUrl"
                 :alt="product.title"
               />
-            </RouterLink>
+            </a>
           </swiper-slide>
         </swiper-container>
       </div>
       <!-- 圖片切換按鈕 -->
-      <div
+      <div v-if="products.length > 0"
         class="navigation position-relative mt-5 mt-md-11 d-flex justify-content-center align-items-start gap-5"
       >
         <div
@@ -129,6 +129,20 @@ export default {
   data() {
     return {
       spaceBetween: 24,
+      products: [
+        {
+          id: 1,
+          title: '玖玖巴－酒友',
+          url: 'https://www.myacg.com.tw/goods_detail.php?gid=4156643',
+          imageUrl: 'https://cdn.myacg.com.tw/goods_images/4156643_1_202310180329005.jpg?v=UBEZT_165459&cod=2398729387a',
+        },
+        {
+          id: 2,
+          title: '賽馬娘桌墊－天秋舞台（小栗帽&小海灣）',
+          url: 'https://www.snowfactory.com.tw/products/red-guava--confiture',
+          imageUrl: 'https://cdn.myacg.com.tw/goods_images/3272208_1_202210250051152.jpg?v=UBEZT_165459&code=43987202397842',
+        },
+      ]
     };
   },
   computed: {

@@ -44,6 +44,6 @@ app.use(
   },
   router
 );
-// app.component('VueLoading', Loading);
+app.component('VueLoading', Loading);
 
 app.mount('#app');
