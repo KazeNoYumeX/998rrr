@@ -408,26 +408,26 @@ export default {
       }
     },
     updateProduct() {
-      let url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/admin/product`;
-      let method = 'post';
-
-      if (!this.isNew) {
-        url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/admin/product/${this.tempProduct.id}`;
-        method = 'put';
-      }
-
-      this.$http[method](url, { data: this.tempProduct }).then(() => {
-        this.getProducts();
-        productModal.hide();
-      });
+      // let url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/admin/product`;
+      // let method = 'post';
+      //
+      // if (!this.isNew) {
+      //   url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/admin/product/${this.tempProduct.id}`;
+      //   method = 'put';
+      // }
+      //
+      // this.$http[method](url, { data: this.tempProduct }).then(() => {
+      //   this.getProducts();
+      //   productModal.hide();
+      // });
     },
     deleteProduct() {
-      const url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/admin/product/${this.tempProduct.id}`;
-
-      this.$http.delete(url).then(() => {
-        this.getProducts();
-        delProductModal.hide();
-      });
+      // const url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/admin/product/${this.tempProduct.id}`;
+      //
+      // this.$http.delete(url).then(() => {
+      //   this.getProducts();
+      //   delProductModal.hide();
+      // });
     },
     handleUpdateImage(status, index) {
       // 透過傳入的狀態（status）參數決定要執行的操作

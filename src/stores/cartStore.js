@@ -19,19 +19,19 @@ export const useCartStore = defineStore('cartStore', {
   actions: {
     // 取得購物車資料
     getCarts() {
-      const url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/cart`;
-      axios.get(url).then((res) => {
-        this.coupon_success = false;
-        this.carts = res.data.data.carts;
-        this.total = res.data.data.total;
-        this.final_total = res.data.data.final_total;
-
-        if (this.carts[0] && this.carts[0].coupon !== undefined) {
-          this.coupon_success = true;
-          this.coupon_code = this.carts[0].coupon.code;
-          this.coupon_title = this.carts[0].coupon.title;
-        }
-      });
+      // const url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/cart`;
+      // axios.get(url).then((res) => {
+      //   this.coupon_success = false;
+      //   this.carts = res.data.data.carts;
+      //   this.total = res.data.data.total;
+      //   this.final_total = res.data.data.final_total;
+      //
+      //   if (this.carts[0] && this.carts[0].coupon !== undefined) {
+      //     this.coupon_success = true;
+      //     this.coupon_code = this.carts[0].coupon.code;
+      //     this.coupon_title = this.carts[0].coupon.title;
+      //   }
+      // });
     },
 
     // 購物車更新商品數量
@@ -42,34 +42,34 @@ export const useCartStore = defineStore('cartStore', {
       this.debouncedUpdateCartItemQty(item);
     },
 
-    debouncedUpdateCartItemQty: debounce(function (item) {
-      const url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/cart/${item.id}`;
-      const data = {
-        data: {
-          product_id: item.product_id,
-          qty: item.qty,
-        },
-      };
-
-      axios.put(url, data).then((res) => {
-        this.getCarts();
-      });
-    }, 300),
+    // debouncedUpdateCartItemQty: debounce(function (item) {
+    //   const url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/cart/${item.id}`;
+    //   const data = {
+    //     data: {
+    //       product_id: item.product_id,
+    //       qty: item.qty,
+    //     },
+    //   };
+    //
+    //   axios.put(url, data).then((res) => {
+    //     this.getCarts();
+    //   });
+    // }, 300),
 
     // 刪除單一品項
     deleteCartItem(item) {
-      this.loadingItem = item.id;
-      const url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/cart/${item.id}`;
-      axios
-        .delete(url)
-        .then((res) => {
-          this.showToast('成功刪除該商品');
-          this.loadingItem = '';
-          this.getCarts();
-        })
-        .catch((err) => {
-          alert(err.response.data.message);
-        });
+      // this.loadingItem = item.id;
+      // const url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/cart/${item.id}`;
+      // axios
+      //   .delete(url)
+      //   .then((res) => {
+      //     this.showToast('成功刪除該商品');
+      //     this.loadingItem = '';
+      //     this.getCarts();
+      //   })
+      //   .catch((err) => {
+      //     alert(err.response.data.message);
+      //   });
     },
 
     // 清空購物車

@@ -269,18 +269,18 @@ export default {
     onSubmit() {
       const order = this.form;
 
-      this.$http
-        .post(`${VITE_APP_URL}/api/${VITE_APP_PATH}/order`, { data: order })
-        .then((res) => {
-          const { message, orderId } = res.data;
-          this.showToast(message);
-          this.$refs.form.resetForm();
-
-          this.$router.push(`/payment/${orderId}`);
-        })
-        .catch((err) => {
-          alert(err.response.data.message);
-        });
+      // this.$http
+      //   .post(`${VITE_APP_URL}/api/${VITE_APP_PATH}/order`, { data: order })
+      //   .then((res) => {
+      //     const { message, orderId } = res.data;
+      //     this.showToast(message);
+      //     this.$refs.form.resetForm();
+      //
+      //     this.$router.push(`/payment/${orderId}`);
+      //   })
+      //   .catch((err) => {
+      //     alert(err.response.data.message);
+      //   });
     },
   },
   mounted() {

@@ -163,17 +163,17 @@ export default {
     },
     async getArticle() {
       this.isLoading = true;
-      const { id } = this.$route.params;
-
-      try {
-        const url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/article/${id}`;
-        const response = await this.$http.get(url);
-        this.article = response.data.article;
-
-        this.findIndex();
-      } catch (error) {
-        console.error('Error fetching article:', error);
-      }
+      // const { id } = this.$route.params;
+      //
+      // try {
+      //   const url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/article/${id}`;
+      //   const response = await this.$http.get(url);
+      //   this.article = response.data.article;
+      //
+      //   this.findIndex();
+      // } catch (error) {
+      //   console.error('Error fetching article:', error);
+      // }
 
       this.isLoading = false;
     },

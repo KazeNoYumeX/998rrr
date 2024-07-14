@@ -70,23 +70,23 @@ export default {
     },
     checkAdmin() {
       // 取出 Token
-      const token = document.cookie.replace(
-        /(?:(?:^|.*;\s*)drmemeToken\s*=\s*([^;]*).*$)|^.*$/,
-        '$1'
-      );
-      axios.defaults.headers.common.Authorization = token;
-
-      const url = `${VITE_APP_URL}/api/user/check`;
-      axios
-        .post(url)
-        .then((res) => {
-          if (!res.data.success) {
-            this.$router.push('/adminLogin');
-          }
-        })
-        .catch((err) => {
-          alert(err.response.data.message);
-        });
+      // const token = document.cookie.replace(
+      //   /(?:(?:^|.*;\s*)drmemeToken\s*=\s*([^;]*).*$)|^.*$/,
+      //   '$1'
+      // );
+      // axios.defaults.headers.common.Authorization = token;
+      //
+      // const url = `${VITE_APP_URL}/api/user/check`;
+      // axios
+      //   .post(url)
+      //   .then((res) => {
+      //     if (!res.data.success) {
+      //       this.$router.push('/adminLogin');
+      //     }
+      //   })
+      //   .catch((err) => {
+      //     alert(err.response.data.message);
+      //   });
     },
   },
   mounted() {

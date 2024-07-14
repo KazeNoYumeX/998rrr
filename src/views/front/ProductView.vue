@@ -304,11 +304,11 @@ export default {
     ...mapActions(useProductsStore, ['toggleFollowProduct', 'getProducts']),
     getProduct() {
       const { id } = this.$route.params;
-      this.$http
-        .get(`${VITE_APP_URL}/api/${VITE_APP_PATH}/product/${id}`)
-        .then((res) => {
-          this.product = res.data.product;
-        });
+      // this.$http
+      //   .get(`${VITE_APP_URL}/api/${VITE_APP_PATH}/product/${id}`)
+      //   .then((res) => {
+      //     this.product = res.data.product;
+      //   });
     },
     updateNum(operator) {
       if (operator === 'plus') {

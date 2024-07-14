@@ -71,7 +71,7 @@
       </div>
       <div class="col-md-10 d-flex justify-content-end mt-6">
         <button
-          class="btn btn-primary-500 ms-2 text-light fw-bold"
+          class="btn btn-orange-998-500 ms-2 text-light fw-bold"
           @click.prevent="payOrder"
         >
           確認付款
@@ -105,30 +105,30 @@ export default {
   methods: {
     getOrder() {
       const orderId = this.$route.params.orderId;
-      this.$http
-        .get(`${VITE_APP_URL}/api/${VITE_APP_PATH}/order/${orderId}`)
-        .then((res) => {
-          const { order } = res.data;
-
-          this.order = order;
-        })
-        .catch((err) => {
-          alert(err.response.data.message);
-        });
+      // this.$http
+      //   .get(`${VITE_APP_URL}/api/${VITE_APP_PATH}/order/${orderId}`)
+      //   .then((res) => {
+      //     const { order } = res.data;
+      //
+      //     this.order = order;
+      //   })
+      //   .catch((err) => {
+      //     alert(err.response.data.message);
+      //   });
     },
 
     payOrder() {
       this.orderId = this.$route.params.orderId;
 
-      this.$http
-        .post(`${VITE_APP_URL}/api/${VITE_APP_PATH}/pay/${this.orderId}`)
-        .then((res) => {
-          this.getOrder();
-          this.$router.push(`/checkout/${this.orderId}`);
-        })
-        .catch((err) => {
-          alert(err.response.data.message);
-        });
+      // this.$http
+      //   .post(`${VITE_APP_URL}/api/${VITE_APP_PATH}/pay/${this.orderId}`)
+      //   .then((res) => {
+      //     this.getOrder();
+      //     this.$router.push(`/checkout/${this.orderId}`);
+      //   })
+      //   .catch((err) => {
+      //     alert(err.response.data.message);
+      //   });
     },
   },
   mounted() {

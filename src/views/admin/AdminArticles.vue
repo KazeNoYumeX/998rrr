@@ -434,26 +434,26 @@ export default {
       }
     },
     getArticles(page = 1) {
-      const url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/admin/articles?page=${page}`;
-
-      // 取得 cookie 中的 token 值
-      const token = document.cookie.replace(
-        /(?:(?:^|.*;\s*)drmemeToken\s*=\s*([^;]*).*$)|^.*$/,
-        '$1'
-      );
-
-      // 設定預設 headers
-      this.$http.defaults.headers.common.Authorization = token;
-
-      this.$http
-        .get(url)
-        .then((res) => {
-          this.articles = res.data.articles;
-          this.pages = res.data.pagination;
-        })
-        .catch((err) => {
-          console.error(err);
-        });
+      // const url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/admin/articles?page=${page}`;
+      //
+      // // 取得 cookie 中的 token 值
+      // const token = document.cookie.replace(
+      //   /(?:(?:^|.*;\s*)drmemeToken\s*=\s*([^;]*).*$)|^.*$/,
+      //   '$1'
+      // );
+      //
+      // // 設定預設 headers
+      // this.$http.defaults.headers.common.Authorization = token;
+      //
+      // this.$http
+      //   .get(url)
+      //   .then((res) => {
+      //     this.articles = res.data.articles;
+      //     this.pages = res.data.pagination;
+      //   })
+      //   .catch((err) => {
+      //     console.error(err);
+      //   });
     },
     getArticle(id) {
       const url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/admin/article/${id}`;

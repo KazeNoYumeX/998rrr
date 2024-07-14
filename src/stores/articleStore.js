@@ -27,18 +27,18 @@ export const useArticleStore = defineStore('useArticleStore', {
     async get10Articles(page = 1) {
       this.isLoading = true;
 
-      const url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/articles?page=${page}`;
-
-      try {
-        const res = await axios.get(url);
-        this.articles = res.data.articles;
-        this.page = res.data.pagination;
-
-        // allArticles
-        this.allArticles.push(...this.articles);
-      } catch (err) {
-        console.error(err.response.data.message);
-      }
+      // const url = `${VITE_APP_URL}/api/${VITE_APP_PATH}/articles?page=${page}`;
+      //
+      // try {
+      //   const res = await axios.get(url);
+      //   this.articles = res.data.articles;
+      //   this.page = res.data.pagination;
+      //
+      //   // allArticles
+      //   this.allArticles.push(...this.articles);
+      // } catch (err) {
+      //   console.error(err.response.data.message);
+      // }
 
       this.isLoading = false;
     },
