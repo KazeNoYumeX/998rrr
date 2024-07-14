@@ -1,0 +1,261 @@
+<template>
+  <div class="col-md-9">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-6">
+<!--      <div class="col">-->
+<!--        <div class="card h-100 p-3 border border-primary-500 border-2">-->
+<!--          <div class="position-relative">-->
+<!--            <img-->
+<!--              src="../../assets/images/logo/logo.webp"-->
+<!--              class="card-img-top aspect-ratio-item"-->
+<!--              alt="drmeme logo"-->
+<!--            />-->
+<!--          </div>-->
+<!--          <div class="card-body px-2">-->
+<!--            <h5 class="card-title text-dark fw-bold">迷粉優惠全館 7 折</h5>-->
+<!--            <p class="fs-5 text-primary-500">-->
+<!--              <span>優惠碼 drmeme 30% off</span>-->
+<!--            </p>-->
+<!--          </div>-->
+<!--          <div class="p-1">-->
+<!--            <button-->
+<!--              type="button"-->
+<!--              @click="copyCoupon"-->
+<!--              class="btn btn-outline-primary-500 w-100 button-hover py-3 fs-5 fw-bold"-->
+<!--            >-->
+<!--              <i class="fa-solid fa-copy"></i-->
+<!--              ><span class="ms-2">複製優惠碼</span>-->
+<!--            </button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+      <!-- 玖玖巴－酒友 -->
+      <div class="col">
+        <div class="card h-100 hover-dashed">
+          <div class="position-relative">
+            <img
+              src="https://cdn.myacg.com.tw/goods_images/4156643_1_202310180329005.jpg?v=UBEZT_165459&cod=2398729387a"
+              class="card-img-top aspect-ratio-item"
+              alt="玖玖巴－酒友"
+            />
+          </div>
+          <div class="card-body px-2">
+            <h5 class="card-title text-dark fw-bold">
+              玖玖巴－酒友
+            </h5>
+            <p class="fs-5 text-primary-500">
+              <span>NT$ 165</span>
+            </p>
+          </div>
+          <div class="p-1">
+            <a
+              target="_blank"
+              href="https://www.myacg.com.tw/goods_detail.php?gid=4156643"
+              class="btn btn-outline-primary-500 w-100 button-hover py-3 fs-5 fw-bold"
+            >
+              <i class="fa-solid fa-right-from-bracket"></i
+              ><span class="ms-2">前往購買</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- 賽馬娘桌墊－天秋舞台（小栗帽&小海灣） -->
+      <div class="col">
+        <div class="card h-100 hover-dashed">
+          <div class="position-relative">
+            <img
+                src="https://cdn.myacg.com.tw/goods_images/3272208_1_202210250051152.jpg?v=UBEZT_165459&code=43987202397842"
+                class="card-img-top aspect-ratio-item"
+                alt="賽馬娘桌墊－天秋舞台（小栗帽&小海灣）"
+            />
+          </div>
+          <div class="card-body px-2">
+            <h5 class="card-title text-dark fw-bold">
+              賽馬娘桌墊－天秋舞台（小栗帽&小海灣）
+            </h5>
+            <p class="fs-5 text-primary-500">
+              <span>NT$ 660</span>
+            </p>
+          </div>
+          <div class="p-1">
+            <a
+                target="_blank"
+                href="https://www.snowfactory.com.tw/products/red-guava--confiture"
+                class="btn btn-outline-primary-500 w-100 button-hover py-3 fs-5 fw-bold"
+            >
+              <i class="fa-solid fa-right-from-bracket"></i
+              ><span class="ms-2">前往購買</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col" v-for="product in products" :key="product.id">
+        <RouterLink
+          class="card h-100 hover-dashed"
+          :to="`/product/${product.id}`"
+        >
+          <div class="position-relative">
+            <button
+              @click.prevent="toggleFollowProduct(product.id)"
+              class="btn border-0 text-primary-500 position-absolute mt-2 top-0 end-0"
+            >
+              <i
+                :class="[
+                  followList.includes(product.id) ? 'fa-solid' : 'fa-regular',
+                  'fa-heart fa-2xl',
+                ]"
+              ></i>
+            </button>
+            <img
+              :src="product.imageUrl['1000w']"
+              class="card-img-top aspect-ratio-item"
+              :alt="product.title"
+              :srcset="`${product.imageUrl['300w']} 300w, ${product.imageUrl['600w']} 600w, ${product.imageUrl['1000w']} 1000w`"
+            />
+          </div>
+          <div class="card-body px-2">
+            <h5 class="card-title text-dark fw-bold">
+              {{ product.title }}
+            </h5>
+            <p class="fs-5">
+              <del
+                v-if="product.origin_price !== product.price"
+                class="text-secondary-500 me-2"
+                >NT$ {{ product.origin_price }}</del
+              ><span>NT$ {{ product.price }}</span>
+            </p>
+          </div>
+          <div class="p-1">
+            <button
+              type="button"
+              class="btn btn-outline-primary-500 w-100 button-hover py-3 fs-5 fw-bold"
+              @click.prevent="addToCart(product.id)"
+            >
+              <i class="fa-solid fa-cart-shopping"></i
+              ><span class="ms-2">加入購物車</span>
+            </button>
+          </div>
+        </RouterLink>
+      </div>
+    </div>
+    <div class="row" v-if="pagination.total_pages > 1">
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center pt-10">
+          <li class="page-item">
+            <button
+              type="button"
+              :class="['page-link', { disabled: !pagination.has_pre }]"
+              aria-label="Previous"
+              @click="getProducts(pagination.current_page - 1)"
+            >
+              <span aria-hidden="true">&laquo;</span>
+            </button>
+          </li>
+          <li
+            v-for="page in pagination.total_pages"
+            :key="page"
+            :class="['page-item', { active: page == pagination.current_page }]"
+          >
+            <button type="button" class="page-link" @click="getProducts(page)">
+              {{ page }}
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              :class="['page-link', { disabled: !pagination.has_next }]"
+              aria-label="Next"
+              @click="getProducts(pagination.current_page + 1)"
+            >
+              <span aria-hidden="true">&raquo;</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- loading -->
+  <div class="vl-parent">
+    <VueLoading
+      v-model:active="isLoading"
+      :can-cancel="false"
+      :is-full-page="fullPage"
+    />
+  </div>
+</template>
+
+<script type="module">
+import { useProductsStore } from '@/stores/productsStore';
+import { useCartStore } from '@/stores/cartStore';
+import { mapActions, mapState } from 'pinia';
+import Swal from 'sweetalert2';
+
+export default {
+  computed: {
+    ...mapState(useProductsStore, [
+      'products',
+      'pageNum',
+      'pagination',
+      'followList',
+      'isLoading',
+      'fullPage',
+    ]),
+  },
+  methods: {
+    ...mapActions(useProductsStore, ['getProducts', 'toggleFollowProduct']),
+    ...mapActions(useCartStore, ['addToCart']),
+    swalToast(msg, status) {
+      Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 1500,
+        width: 280,
+        timerProgressBar: false,
+        customClass: {
+          popup: 'cart-toast-modal',
+        },
+      }).fire({
+        icon: status === 'success' ? 'success' : 'error',
+        title: msg,
+      });
+    },
+    copyCoupon() {
+      const couponText = '998rrr';
+
+      navigator.clipboard.readText().then((text) => {
+        console.log(text); // 剪貼簿中的文本內容
+      });
+
+      navigator.clipboard
+        .writeText(couponText)
+        .then(() => this.swalToast('複製成功', 'success'))
+        .catch(() => this.swalToast('複製失敗', 'fail'));
+    },
+  },
+  mounted() {
+    this.getProducts();
+  },
+};
+</script>
+
+<style lang="scss">
+@import '../../assets/SCSS/all.scss';
+
+.cart-toast-modal {
+  width: 300px !important;
+}
+
+.aspect-ratio-item {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.darken {
+  filter: brightness(90%);
+}
+
+.products-list-sidebar {
+  transition: margin 0.3s ease-in-out;
+}
+</style>
