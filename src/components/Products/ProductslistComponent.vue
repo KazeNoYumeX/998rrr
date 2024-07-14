@@ -79,7 +79,7 @@
           <div class="p-1">
             <a
                 target="_blank"
-                href="https://www.snowfactory.com.tw/products/red-guava--confiture"
+                href="https://www.myacg.com.tw/goods_detail.php?gid=3272208"
                 class="btn btn-outline-orange-998-500 w-100 button-hover py-3 fs-5 fw-bold"
             >
               <i class="fa-solid fa-right-from-bracket"></i

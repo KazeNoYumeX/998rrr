@@ -139,7 +139,7 @@ export default {
         {
           id: 2,
           title: '賽馬娘桌墊－天秋舞台（小栗帽&小海灣）',
-          url: 'https://www.snowfactory.com.tw/products/red-guava--confiture',
+          url: 'https://www.myacg.com.tw/goods_detail.php?gid=3272208',
           imageUrl: 'https://cdn.myacg.com.tw/goods_images/3272208_1_202210250051152.jpg?v=UBEZT_165459&code=43987202397842',
         },
       ]
