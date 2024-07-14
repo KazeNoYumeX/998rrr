@@ -29,7 +29,7 @@ export default {
     position: absolute;
     width: 24px;
     height: 24px;
-    background-color: $primary-500;
+    background-color: $orange-998-500;
     top: -17px;
     left: -28.5px;
     z-index: -1;
@@ -41,7 +41,7 @@ export default {
     position: absolute;
     width: 40px;
     height: 40px;
-    background-color: $primary-400;
+    background-color: $orange-998-400;
     bottom: -20px;
     right: -17px;
     z-index: -1;

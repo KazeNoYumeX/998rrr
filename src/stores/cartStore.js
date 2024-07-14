@@ -77,7 +77,7 @@ export const useCartStore = defineStore('cartStore', {
       const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
           confirmButton: 'btn btn-secondary-500 ms-2',
-          cancelButton: 'btn btn-primary-500 text-light',
+          cancelButton: 'btn btn-orange-998-500 text-light',
         },
         buttonsStyling: false,
       });

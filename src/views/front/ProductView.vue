@@ -30,7 +30,7 @@
           <div class="d-flex justify-content-end">
             <button
               @click.prevent="toggleFollowProduct(product.id)"
-              class="btn border-0 text-primary-500 mt-2"
+              class="btn border-0 text-orange-998-500 mt-2"
             >
               <i
                 :class="[
@@ -78,7 +78,7 @@
             <div class="col-6">
               <button
                 type="button"
-                class="btn btn-primary-500 text-light p-2 fs-6 fw-bold"
+                class="btn btn-orange-998-500 text-light p-2 fs-6 fw-bold"
                 @click.prevent="addToCart(product.id, itemNum)"
               >
                 <i class="fa-solid fa-cart-shopping"></i
@@ -219,7 +219,7 @@
               <div class="position-relative">
                 <button
                   @click.prevent="toggleFollowProduct(product.id)"
-                  class="btn border-0 text-primary-500 position-absolute mt-2 top-0 end-0"
+                  class="btn border-0 text-orange-998-500 position-absolute mt-2 top-0 end-0"
                 >
                   <i
                     :class="[
@@ -252,7 +252,7 @@
               <div class="p-1">
                 <button
                   type="button"
-                  class="btn btn-outline-primary-500 w-100 button-hover py-3 fs-5 fw-bold"
+                  class="btn btn-outline-orange-998-500 w-100 button-hover py-3 fs-5 fw-bold"
                   @click.prevent="addToCart(product.id)"
                 >
                   <i class="fa-solid fa-cart-shopping"></i

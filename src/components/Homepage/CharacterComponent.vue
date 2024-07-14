@@ -21,7 +21,7 @@
           <img
               src="../../assets/images/character/full.webp"
               alt="設定圖"
-              class="w-md-100 w-sm-75 mt-md-10 mt-sm-5 mt-md-2"
+              class="w-md-100 mt-md-10 mt-sm-5 mt-md-2 mw-100"
               loading="lazy"
           />
         </div>

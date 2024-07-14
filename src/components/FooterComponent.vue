@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer bg-orange-998 py-14">
+  <footer class="footer bg-orange-998-500 py-14">
     <div
       class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
     >
@@ -41,7 +41,7 @@
         <ul class="mt-5 list-unstyled row gx-10 gy-5 justify-content-center">
           <li class="col-5 col-md-3">
             <a
-              class="text-light text-center d-flex flex-column align-items-center hover-primary-500"
+              class="text-light text-center d-flex flex-column align-items-center hover-orange-998-500"
               href="https://www.twitch.tv/998rrr"
               target="_blank"
               ><i class="fa-brands fa-twitch fs-2"></i>
@@ -50,7 +50,7 @@
           </li>
           <li class="col-5 col-md-3">
             <a
-              class="text-light text-center d-flex flex-column align-items-center hover-primary-500"
+              class="text-light text-center d-flex flex-column align-items-center hover-orange-998-500"
               href="https://x.com/_998rrr_"
               target="_blank"
               ><i class="fa-brands fa-twitter fs-2"></i
@@ -59,7 +59,7 @@
           </li>
           <li class="col-5 col-md-3">
             <a
-              class="text-light text-center d-flex flex-column align-items-center hover-primary-500"
+              class="text-light text-center d-flex flex-column align-items-center hover-orange-998-500"
               href="https://www.youtube.com/@998rrr"
               target="_blank"
               ><i class="fa-brands fa-youtube fs-2"></i>
@@ -68,7 +68,7 @@
           </li>
           <li class="col-5 col-md-3">
             <a
-                class="text-light text-center d-flex flex-column align-items-center hover-primary-500"
+                class="text-light text-center d-flex flex-column align-items-center hover-orange-998-500"
                 href="https://discord.gg/K3cHZPcUu3"
                 target="_blank"
             ><i class="fa-brands fa-discord fs-2"></i>
@@ -78,7 +78,7 @@
         </ul>
       </div>
       <p class="text-secondary-500 fs-sm mt-10 mt-md-1 d-md-none text-center">
-        Copyright © 2020 玖玖巴 All Rights Reserved.
+        Copyright © 2024 玖玖巴 All Rights Reserved.
       </p>
     </div>
   </footer>

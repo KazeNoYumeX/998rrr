@@ -2,7 +2,7 @@
   <!-- md 以下 -->
   <div class="col d-md-none sticky-top">
     <select
-      class="form-select border border-primary-500 mb-3"
+      class="form-select border border-orange-998-500 mb-3"
       v-model="currentCategory"
       @change="getProducts"
     >
@@ -20,7 +20,7 @@
           v-for="category in categories"
           :key="category"
           @click.prevent="changeCategory(category)"
-          class="list-group-item list-group-item-action fw-bold products-list-sidebar rounded-1"
+          class="list-group-item list-group-item-action fw-bold products-list-sidebar rounded-1 bg-orange-998-500 border-orange-998-400"
           :class="{
             active: category === currentCategory,
           }"

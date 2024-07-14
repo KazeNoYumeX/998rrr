@@ -2,7 +2,7 @@
   <div class="col-md-9">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-6">
 <!--      <div class="col">-->
-<!--        <div class="card h-100 p-3 border border-primary-500 border-2">-->
+<!--        <div class="card h-100 p-3 border border-orange-998-500 border-2">-->
 <!--          <div class="position-relative">-->
 <!--            <img-->
 <!--              src="../../assets/images/logo/logo.webp"-->
@@ -12,7 +12,7 @@
 <!--          </div>-->
 <!--          <div class="card-body px-2">-->
 <!--            <h5 class="card-title text-dark fw-bold">迷粉優惠全館 7 折</h5>-->
-<!--            <p class="fs-5 text-primary-500">-->
+<!--            <p class="fs-5 text-orange-998-500">-->
 <!--              <span>優惠碼 drmeme 30% off</span>-->
 <!--            </p>-->
 <!--          </div>-->
@@ -20,7 +20,7 @@
 <!--            <button-->
 <!--              type="button"-->
 <!--              @click="copyCoupon"-->
-<!--              class="btn btn-outline-primary-500 w-100 button-hover py-3 fs-5 fw-bold"-->
+<!--              class="btn btn-outline-orange-998-500 w-100 button-hover py-3 fs-5 fw-bold"-->
 <!--            >-->
 <!--              <i class="fa-solid fa-copy"></i-->
 <!--              ><span class="ms-2">複製優惠碼</span>-->
@@ -42,7 +42,7 @@
             <h5 class="card-title text-dark fw-bold">
               玖玖巴－酒友
             </h5>
-            <p class="fs-5 text-primary-500">
+            <p class="fs-5 text-orange-998-500">
               <span>NT$ 165</span>
             </p>
           </div>
@@ -50,7 +50,7 @@
             <a
               target="_blank"
               href="https://www.myacg.com.tw/goods_detail.php?gid=4156643"
-              class="btn btn-outline-primary-500 w-100 button-hover py-3 fs-5 fw-bold"
+              class="btn btn-outline-orange-998-500 w-100 button-hover py-3 fs-5 fw-bold"
             >
               <i class="fa-solid fa-right-from-bracket"></i
               ><span class="ms-2">前往購買</span>
@@ -72,7 +72,7 @@
             <h5 class="card-title text-dark fw-bold">
               賽馬娘桌墊－天秋舞台（小栗帽&小海灣）
             </h5>
-            <p class="fs-5 text-primary-500">
+            <p class="fs-5 text-orange-998-500">
               <span>NT$ 660</span>
             </p>
           </div>
@@ -80,7 +80,7 @@
             <a
                 target="_blank"
                 href="https://www.snowfactory.com.tw/products/red-guava--confiture"
-                class="btn btn-outline-primary-500 w-100 button-hover py-3 fs-5 fw-bold"
+                class="btn btn-outline-orange-998-500 w-100 button-hover py-3 fs-5 fw-bold"
             >
               <i class="fa-solid fa-right-from-bracket"></i
               ><span class="ms-2">前往購買</span>
@@ -96,7 +96,7 @@
           <div class="position-relative">
             <button
               @click.prevent="toggleFollowProduct(product.id)"
-              class="btn border-0 text-primary-500 position-absolute mt-2 top-0 end-0"
+              class="btn border-0 text-orange-998-500 position-absolute mt-2 top-0 end-0"
             >
               <i
                 :class="[
@@ -127,7 +127,7 @@
           <div class="p-1">
             <button
               type="button"
-              class="btn btn-outline-primary-500 w-100 button-hover py-3 fs-5 fw-bold"
+              class="btn btn-outline-orange-998-500 w-100 button-hover py-3 fs-5 fw-bold"
               @click.prevent="addToCart(product.id)"
             >
               <i class="fa-solid fa-cart-shopping"></i

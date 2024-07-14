@@ -205,7 +205,7 @@
               </div> -->
               <button
                 type="submit"
-                class="btn btn-primary-500 text-light fw-bold w-100"
+                class="btn btn-orange-998-500 text-light fw-bold w-100"
                 @click="resetForm"
               >
                 提交訂單

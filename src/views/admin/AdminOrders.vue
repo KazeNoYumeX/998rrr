@@ -82,7 +82,7 @@
       class="modal-dialog modal-dialog-scrollable modal-xl modal-fullscreen-xl-down"
     >
       <div class="modal-content">
-        <div class="modal-header bg-primary-500">
+        <div class="modal-header bg-orange-998-500">
           <h1 class="modal-title fs-5 fw-bold text-light" id="orderModalLabel">
             查看訂單
           </h1>

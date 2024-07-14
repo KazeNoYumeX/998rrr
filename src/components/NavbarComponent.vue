@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-orange-998 fixed-top">
+  <nav class="navbar navbar-expand-lg bg-orange-998-500 fixed-top">
     <div class="container d-flex justify-content-between align-items-center">
       <h1>
         <RouterLink to="/" class="navbar-brand d-block">玖玖巴</RouterLink>
@@ -45,7 +45,7 @@
 <!--              >常見問答</RouterLink-->
 <!--            >-->
 <!--          </li>-->
-          <li v-show="isFollowBtnVisible" class="nav-item">
+          <li class="nav-item">
             <a
               class="btn btn-follow fs-5 fw-bold py-3"
               aria-current="page"
@@ -61,7 +61,7 @@
 <!--              aria-current="page"-->
 <!--              ><i-->
 <!--                class="fa-solid fa-heart"-->
-<!--                :class="{ 'text-primary-500': followList.length > 0 }"-->
+<!--                :class="{ 'text-orange-998-500': followList.length > 0 }"-->
 <!--              ></i-->
 <!--            ></RouterLink>-->
 <!--          </li>-->

@@ -9,7 +9,7 @@
         <th>小計</th>
         <th>
           <button
-            class="btn btn-outline-primary-500 button-hover"
+            class="btn btn-outline-orange-998-500 button-hover"
             type="button"
             @click="deleteAllCarts()"
           >
@@ -53,7 +53,7 @@
           <td>
             <button
               type="button"
-              class="btn text-primary-500"
+              class="btn text-orange-998-500"
               @click="deleteCartItem(item)"
             >
               X

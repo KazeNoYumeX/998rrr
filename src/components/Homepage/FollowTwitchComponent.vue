@@ -69,7 +69,7 @@
         </div>
         <div class="d-flex justify-content-between text-light fw-bold">
           <div>
-            <i class="fa-solid fa-heart text-primary-500 me-1"></i>
+            <i class="fa-solid fa-heart text-orange-998-500 me-1"></i>
             {{ post.likes }}
           </div>
           <div>{{ post.date }}</div>

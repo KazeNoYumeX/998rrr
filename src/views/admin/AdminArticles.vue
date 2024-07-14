@@ -26,7 +26,7 @@
                 aria-describedby="button-addon2"
               />
               <button
-                class="btn btn-primary-500 text-light"
+                class="btn btn-orange-998-500 text-light"
                 type="button"
                 id="button-addon2"
               >
@@ -52,7 +52,7 @@
           </div>
           <button
             type="button"
-            class="btn btn-primary-500 text-light fw-bold"
+            class="btn btn-orange-998-500 text-light fw-bold"
             @click="openModal('create')"
           >
             <i class="fa-solid fa-plus me-2"></i>新增文章
@@ -135,7 +135,7 @@
         class="modal-dialog modal-dialog-scrollable modal-xl modal-fullscreen-xl-down"
       >
         <div class="modal-content">
-          <div class="modal-header bg-primary-500">
+          <div class="modal-header bg-orange-998-500">
             <h1
               class="modal-title fs-5 fw-bold text-light"
               id="articleModalLabel"
@@ -252,7 +252,7 @@
                           class="col-md-6"
                         >
                           <button
-                            class="btn btn-sm btn-primary-500 text-light w-100"
+                            class="btn btn-sm btn-orange-998-500 text-light w-100"
                             @click="tempArticle.tag.push('')"
                           >
                             新增標籤
@@ -261,7 +261,7 @@
                       </template>
                       <template v-else>
                         <button
-                          class="btn btn-sm btn-primary-500 text-light col-md-6"
+                          class="btn btn-sm btn-orange-998-500 text-light col-md-6"
                           @click="createTag"
                         >
                           新增標籤
@@ -286,7 +286,7 @@
                     <button
                       class="btn text-light fw-bold"
                       :class="{
-                        'btn-primary-500': true,
+                        'btn-orange-998-500': true,
                         'btn-disabled': isDisabled,
                       }"
                       @click="handleUpdateImage"
@@ -322,7 +322,7 @@
             </button>
             <button
               type="button"
-              class="btn btn-primary-500 text-light fw-bold"
+              class="btn btn-orange-998-500 text-light fw-bold"
               @click="updateArticle"
             >
               儲存

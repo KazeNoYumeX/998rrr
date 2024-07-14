@@ -11,7 +11,7 @@
             <div class="row gy-md-2 gy-lg-0">
               <div class="col-6 col-lg-3">
                 <div
-                  class="d-flex justify-content-md-center align-items-center py-md-3 border-none border border-2 border-primary-500 bdrs-30 text-primary-500"
+                  class="d-flex justify-content-md-center align-items-center py-md-3 border-none border border-2 border-orange-998-500 bdrs-30 text-orange-998-500"
                 >
                   <span class="material-symbols-outlined me-2"> school </span
                   >學校沒有教的事
@@ -19,7 +19,7 @@
               </div>
               <div class="col-6 col-lg-3">
                 <div
-                  class="d-flex justify-content-md-center align-items-center py-md-3 border-none border border-2 border-primary-500 bdrs-30 text-primary-500"
+                  class="d-flex justify-content-md-center align-items-center py-md-3 border-none border border-2 border-orange-998-500 bdrs-30 text-orange-998-500"
                 >
                   <span class="material-symbols-outlined me-2">
                     stethoscope </span
@@ -28,7 +28,7 @@
               </div>
               <div class="col-6 col-lg-3">
                 <div
-                  class="d-flex justify-content-md-center align-items-center py-md-3 border-none border border-2 border-primary-500 bdrs-30 text-primary-500"
+                  class="d-flex justify-content-md-center align-items-center py-md-3 border-none border border-2 border-orange-998-500 bdrs-30 text-orange-998-500"
                 >
                   <span class="material-symbols-outlined me-2">
                     medication </span
@@ -37,7 +37,7 @@
               </div>
               <div class="col-6 col-lg-3">
                 <div
-                  class="d-flex justify-content-md-center align-items-center py-md-3 border-none border border-2 border-primary-500 bdrs-30 text-primary-500"
+                  class="d-flex justify-content-md-center align-items-center py-md-3 border-none border border-2 border-orange-998-500 bdrs-30 text-orange-998-500"
                 >
                   <span class="material-symbols-outlined me-2">
                     question_mark </span
@@ -161,48 +161,48 @@ export default {
   },
   methods: {
     async getSpotifyToken() {
-      const url = 'https://accounts.spotify.com/api/token';
-
-      const options = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        data: `grant_type=client_credentials&client_id=${VITE_APP_SPOTIFY_CLIENT_ID}&client_secret=${VITE_APP_SPOTIFY_CLIENT_SECRET}`,
-        url,
-      };
-
-      try {
-        const response = await this.$http(options);
-        const token = response.data.access_token;
-        localStorage.setItem('token', token);
-      } catch (error) {
-        console.error('getSpotifyToken Error:', error);
-        // throw error; // 可以拋出錯誤或進行其他錯誤處理
-      }
+      // const url = 'https://accounts.spotify.com/api/token';
+      //
+      // const options = {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/x-www-form-urlencoded',
+      //   },
+      //   data: `grant_type=client_credentials&client_id=${VITE_APP_SPOTIFY_CLIENT_ID}&client_secret=${VITE_APP_SPOTIFY_CLIENT_SECRET}`,
+      //   url,
+      // };
+      //
+      // try {
+      //   const response = await this.$http(options);
+      //   const token = response.data.access_token;
+      //   localStorage.setItem('token', token);
+      // } catch (error) {
+      //   console.error('getSpotifyToken Error:', error);
+      //   // throw error; // 可以拋出錯誤或進行其他錯誤處理
+      // }
     },
     async getSpotifyEp() {
-      const token = localStorage.getItem('token');
-      const url = `https://api.spotify.com/v1/episodes/${this.id}?market=TW`;
-      const options = {
-        method: 'GET',
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        url,
-      };
+      // const token = localStorage.getItem('token');
+      // const url = `https://api.spotify.com/v1/episodes/${this.id}?market=TW`;
+      // const options = {
+      //   method: 'GET',
+      //   headers: {
+      //     Authorization: `Bearer ${token}`,
+      //   },
+      //   url,
+      // };
 
-      try {
-        const response = await this.$http(options);
-        const { images, name, audio_preview_url } = response.data;
-
-        this.podcast.images = images[1].url;
-        this.podcast.title = name;
-        this.podcast.epSrc = audio_preview_url;
-      } catch (error) {
-        console.error('getSpotifyEp Error:', error.message);
-        // throw error; // 可以拋出錯誤或進行其他錯誤處理
-      }
+      // try {
+      //   const response = await this.$http(options);
+      //   const { images, name, audio_preview_url } = response.data;
+      //
+      //   this.podcast.images = images[1].url;
+      //   this.podcast.title = name;
+      //   this.podcast.epSrc = audio_preview_url;
+      // } catch (error) {
+      //   console.error('getSpotifyEp Error:', error.message);
+      //   // throw error; // 可以拋出錯誤或進行其他錯誤處理
+      // }
     },
     getEpMetadata() {
       const epAudio = this.$refs.episode;

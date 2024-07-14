@@ -2,7 +2,7 @@
   <button
     v-if="showBackToTop"
     type="button"
-    class="rounded-circle border-0 bg-primary-500 bg-gradient text-light button-backtotop"
+    class="rounded-circle border-0 bg-orange-998-500 bg-gradient text-light button-backtotop"
     style="width: 50px; height: 50px"
     @click="backtotop"
   >

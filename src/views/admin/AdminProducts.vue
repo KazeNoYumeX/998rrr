@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-between">
       <h1 class="fs-4 fw-bold">產品管理</h1>
       <button
-        class="btn btn-primary-500 text-light fw-bold"
+        class="btn btn-orange-998-500 text-light fw-bold"
         type="button"
         @click="openModal('create')"
       >
@@ -79,7 +79,7 @@
       class="modal-dialog modal-dialog-scrollable modal-xl modal-fullscreen-xl-down"
     >
       <div class="modal-content">
-        <div class="modal-header bg-primary-500">
+        <div class="modal-header bg-orange-998-500">
           <h1
             class="modal-title fs-5 fw-bold text-light"
             id="productModalLabel"
@@ -105,7 +105,7 @@
                   <button
                     class="btn text-light fw-bold"
                     :class="{
-                      'btn-primary-500': true,
+                      'btn-orange-998-500': true,
                       'btn-disabled': isDisabledMain,
                     }"
                     @click="handleUpdateImage('main')"
@@ -137,7 +137,7 @@
                   <button
                     class="btn text-light fw-bold"
                     :class="{
-                      'btn-primary-500': true,
+                      'btn-orange-998-500': true,
                       'btn-disabled': isDisabledMulti,
                     }"
                     @click="handleUpdateImage('multi')"
@@ -276,7 +276,7 @@
           </button>
           <button
             type="button"
-            class="btn btn-primary-500 text-light fw-bold"
+            class="btn btn-orange-998-500 text-light fw-bold"
             @click="updateProduct"
           >
             確認

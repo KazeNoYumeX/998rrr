@@ -45,7 +45,8 @@ $yellow: #ffc107 !default;
 $green: #198754 !default;
 $teal: #20c997 !default;
 $cyan: #0dcaf0 !default;
-$orange-998: #F28465 !default;
+$orange-998-500: #F28465 !default;
+$orange-998-400: #F8A093FF !default;
 $cyan-998: #6BE6D9 !default;
 $teal-998: #3FA6C4 !default;
 // scss-docs-end color-variables
@@ -66,7 +67,8 @@ $colors: (
   'white': $white,
   'gray': $gray-600,
   'gray-dark': $gray-800,
-  'orange-998': $orange-998,
+  'orange-998-500': $orange-998-500,
+  'orange-998-400': $orange-998-400,
   'cyan-998': $cyan-998,
   'teal-998': $teal-998,
 ) !default;
@@ -320,7 +322,8 @@ $warning: $yellow !default;
 $danger: $red !default;
 $light: $white !default;
 $dark: $black !default;
-$orange-998: #F28465 !default;
+$orange-998-500: #F28465 !default;
+$orange-998-400: #F8A093FF !default;
 $cyan-998: #6BE6D9 !default;
 $teal-998: #3FA6C4 !default;
 // scss-docs-end theme-color-variables
@@ -343,7 +346,8 @@ $theme-colors: (
   'info': $info,
   'warning': $warning,
   'danger': $danger,
-  'orange-998': $orange-998,
+  'orange-998-500': $orange-998-500,
+  'orange-998-400': $orange-998-400,
   'cyan-998': $cyan-998,
   'teal-998': $teal-998,
 ) !default;

@@ -8,7 +8,7 @@
             class="order-2 order-md-1 col-md-5 d-flex flex-column justify-content-between pt-8 pb-4 pt-md-30 pb-md-20"
         >
           <h1
-              class="display-1 fw-bold fst-italic text-primary-500 position-relative"
+              class="display-1 fw-bold fst-italic text-orange-998-500 position-relative"
           >
             <img
                 src="../../assets/images/banner/logo.webp"
@@ -30,7 +30,7 @@
                 <div ref="typewriteAnimated" class="typewrite-animation">
                   <span
                       ref="typewriteText"
-                      class="d-inline-block border-bottom border-4 border-primary-500"
+                      class="d-inline-block border-bottom border-4 border-orange-998-500"
                   >{{ typedText }}</span
                   >
                 </div>
@@ -116,7 +116,7 @@
             <div ref="typewriteAnimated" class="typewrite-animation">
               <span
                   ref="typewriteText"
-                  class="d-inline-block border-bottom border-4 border-primary-500"
+                  class="d-inline-block border-bottom border-4 border-orange-998-500"
               >{{ typedText }}</span
               >
             </div>

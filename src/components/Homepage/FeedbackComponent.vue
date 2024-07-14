@@ -8,7 +8,7 @@
     <div class="row g-6">
       <div class="col-md-6">
         <div
-          class="p-6 p-md-10 border-dashed border-dashed-primary-500 d-flex flex-column h-100"
+          class="p-6 p-md-10 border-dashed border-dashed-orange-998-500 d-flex flex-column h-100"
         >
           <div class="fs-3 fw-bold">
             <i class="fa-solid fa-podcast me-2 text-secondary-500"></i
@@ -65,7 +65,7 @@
       </div>
       <div class="col-md-6">
         <div
-          class="p-6 p-md-10 border-dashed border-dashed-primary-500 d-flex flex-column h-100"
+          class="p-6 p-md-10 border-dashed border-dashed-orange-998-500 d-flex flex-column h-100"
         >
           <div class="fs-3 fw-bold">
             <i class="fa-solid fa-podcast me-2 text-secondary-500"></i

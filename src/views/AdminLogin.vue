@@ -36,7 +36,7 @@
           <label for="password">密碼</label>
         </div>
         <button
-          class="btn btn-lg btn-primary-500 text-light fw-bold w-100 mt-3"
+          class="btn btn-lg btn-orange-998-500 text-light fw-bold w-100 mt-3"
           type="submit"
         >
           登入
