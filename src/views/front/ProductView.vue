@@ -184,11 +184,11 @@
                 aria-labelledby="size-tab"
                 tabindex="0"
               >
-                <img
-                  src="../../assets/images/products/size-t-short.jpg"
-                  alt="尺寸表"
-                  class="w-100"
-                />
+<!--                <img-->
+<!--                  src="../../assets/images/products/size-t-short.jpg"-->
+<!--                  alt="尺寸表"-->
+<!--                  class="w-100"-->
+<!--                />-->
               </div>
             </div>
           </div>
