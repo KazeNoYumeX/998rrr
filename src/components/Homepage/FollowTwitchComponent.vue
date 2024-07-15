@@ -133,7 +133,7 @@ export default {
 @import '../../assets/SCSS/base/variables';
 @import 'bootstrap/scss/mixins';
 
-// 追蹤 ig 貼文
+// 追蹤 Twitch 貼文
 .slide-img {
   height: 410px;
   @include media-breakpoint-up(md) {

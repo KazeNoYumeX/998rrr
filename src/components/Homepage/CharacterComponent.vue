@@ -1,6 +1,6 @@
 <template>
   <!-- 首頁 人物設定區塊 -->
-  <div class="container mt-4">
+  <div class="container mt-2 mb-md-10 mb-sm-2">
     <div class="row">
       <!-- 人物設定左側圖片區塊 -->
       <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
@@ -14,14 +14,23 @@
       <div class="col-12 col-md-6 d-flex flex-column">
         <div class="mt-md-10 mt-sm-5">
           <h2 class="fs-2 fs-md fw-bold mt-md-10 mt-sm-5">人物設定</h2>
-          <p class="mt-md-10 mt-sm-5">
-            《998》是一款以醫院為背景的角色扮演遊戲，玩家將扮演一名醫生，透過遊戲中的劇情與選擇，探索醫生的生活與工作，並透過遊戲中的互動，了解醫生的心路歷程。
+          <p class="fs-5 mt-md-5 mt-sm-3">
+            <span class="fs-5">修練了一百年的二尾狐，目前100歲歲了～</span>
+            <br /><br />
+            <b class="fw-bold">生日</b> － 06/22
+            <br /><br />
+            <b class="fs-5">圖奇合作夥伴紀念日</b> － 2023/12/30
+            <br /><br />
+            <b class="fs-5">圖奇開台紀念日</b>－<del>2021/11/16</del>
+            <span class="fs-6 ml-5">&nbsp;&nbsp;&nbsp;這是998前期各種嘗試的日期所以不算數啦</span>
+            <br />
+            <br />
           </p>
-          <h2 class="fs-2 fs-md fw-bold mt-md-10 mt-sm-5">設定圖</h2>
+          <h2 class="fs-2 fs-md fw-bold mt-md-5">設定圖</h2>
           <img
               src="../../assets/images/character/full.webp"
               alt="設定圖"
-              class="w-md-100 mt-md-10 mt-sm-5 mt-md-2 mw-100"
+              class="w-md-100 mt-md-2 mt-sm-3 mw-100"
               loading="lazy"
           />
         </div>
@@ -110,7 +119,7 @@ export default {
 @import '../../assets/SCSS/base/variables';
 @import 'bootstrap/scss/mixins';
 
-// 追蹤 ig 貼文
+// 追蹤 Twitch 貼文
 .slide-img {
   height: 410px;
   @include media-breakpoint-up(md) {
