@@ -26,4 +26,4 @@ module.exports = {
     'no-unused-vars': 'off',
     camelcase: 'off',
   },
-};
+}
